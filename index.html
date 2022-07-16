@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body class="bg-teal-300 w-screen h-fit font-spacemono
+
+md:h-screen md:flex md:flex-col md:justify-center md:items-center">
+
+  <!-- Header -->
+  <header class=" w-full flex justify-center items-center font-semibold text-2xl text-teal-900 py-7 tracking-widest
+  
+  md:text-2xl md:h-3/12">
+    SPLI <br> TTER
+  </header>
+
+  <!-- Main -->
+  <main class="bg-white rounded-t-2xl p-5
+  
+  md:w-4/6 md:h-6/12 md:flex md:justify-between md:rounded-2xl md:gap-10 md:p-7">
+
+    <!-- Values -->
+    <div class=" h-fit w-full">
+      <!-- Bill Div -->
+      <div class="h-fit w-full">
+        <!-- Label for Bill -->
+        <label for="bill" class="text-base text-teal-900 font-semibold">Bill</label>
+        <!-- Bill Input Div -->
+        <div class="mt-2 h-10 bg-gray-200 w-full flex justify-between rounded-lg overflow-hidden items-center relative">
+          <!-- Dollar Icon -->
+          <img src="../images/icon-dollar.svg" alt="icon-dollar" class="px-3 h-2/5 absolute">
+          <!-- Bill Input -->
+          <input type="text" name="bill" placeholder="0" class="w-full h-full text-right bg-gray-200 px-3 text-xl font-semibold text-teal-900 
+          focus:border-2 focus:border-solid focus:border-teal-500 outline-none rounded-lg placeholder:text-gray-400">
+        </div>
+      </div>
+      
+      <!-- Tip Div -->
+      <div class="h-fit w-full">
+        <!-- Tip Text -->
+        <p class="text-base text-teal-900 font-semibold pt-4">Select Tip %</p>
+        <!-- Buttons Div -->
+        <div class="flex flex-wrap pt-3 justify-between gap-5 w-full first-letter:md:gap-0">
+          <button class="w-32 bg-teal-900 rounded-lg h-12 text-xl text-white font-semibold text-center
+          hover:bg-teal-500 hover:text-teal-900
+          md:w-28">5%</button>
+          <button class="w-32 bg-teal-900 rounded-lg h-12 text-xl text-white font-semibold text-center
+          hover:bg-teal-500 hover:text-teal-900
+          md:w-28">10%</button>
+          <button class="w-32 bg-teal-900 rounded-lg h-12 text-xl text-white font-semibold text-center
+          hover:bg-teal-500 hover:text-teal-900
+          md:w-28">15%</button>
+          <button class="w-32 bg-teal-900 rounded-lg h-12 text-xl text-white font-semibold text-center
+          hover:bg-teal-500 hover:text-teal-900
+          md:w-28">25%</button>
+          <button class="w-32 bg-teal-900 rounded-lg h-12 text-xl text-white font-semibold text-center
+          hover:bg-teal-500 hover:text-teal-900
+          md:w-28">50%</button>
+          <input type="text" placeholder="Custom" class="w-32 bg-gray-300 rounded-lg h-12 text-xl px-4 font-semibold text-teal-900 focus:border-2 focus:border-solid focus:border-teal-500 outline-none text-right
+          md:w-28">
+        </div>
+      </div>
+
+      <!-- Number of People Div -->
+      <div class="h-fit w-full mt-6 mb-6">
+        <!-- Label for Number of People -->
+        <label for="Num" class="text-base text-teal-900 font-semibold">Number of People</label>
+        <!-- Number of People Input Div -->
+        <div class="mt-2 h-10 bg-gray-200 w-full flex justify-between rounded-lg overflow-hidden items-center relative">
+          <!-- Person Icon -->
+          <img src="../images/icon-person.svg" alt="icon-person" class="px-3 h-2/5 absolute">
+          <!-- Number of People Input -->
+          <input type="text" placeholder="0" name="Num" class="w-full h-full text-right bg-gray-200 px-3 text-xl font-semibold text-teal-900 
+          focus:border-2 focus:border-solid focus:border-teal-600 outline-none rounded-lg placeholder:text-gray-400">
+        </div>
+      </div>
+    </div>
+
+    <!-- Output Screen-->
+    <div class="h-fit w-full rounded-2xl bg-teal-900 p-4 flex flex-col justify-between
+    md:h-full md:p-8">
+      <!-- Tip/Total -->
+      <div class="w-full flex flex-col gap-5">
+        <!-- Tip/Person -->
+        <div class="flex justify-between h-fit w-full 
+        md:mb-7">
+          <p class="text-base text-white font-semibold">Tip Amount <br>
+            <small class="text-neutral-400 font-semibold">/person</small>
+          </p>
+          <h1 class="flex items-center text-3xl font-semibold text-teal-500">$0.00</h1>
+        </div>
+        <!-- Total/Person -->
+        <div class="flex justify-between h-fit w-full">
+          <p class="text-base text-white font-semibold">Total <br>
+            <small class="text-neutral-400 font-semibold">/person</small>
+          </p>
+          <h1 class="flex items-center text-3xl font-semibold text-teal-500">$0.00</h1>
+        </div>
+      </div>
+      <!-- Reset Button -->
+      <button class="w-full h-12 bg-teal-500 mt-8 rounded-md mb-2 text-xl uppercase text-teal-900 font-semibold">Reset</button>
+    </div>
+  </main>
+  <script type="module" src="./assets/js/main.js"></script>
+</body>
+</html>
